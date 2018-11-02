@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541151547844.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1322946078",
+    "id" : "E7F806AC",
+    "lastKnownWriteTime" : 1541153213,
+    "last_content_update" : -2147483648,
+    "path" : "D:/Dati/vito.tranquillo/gitProject/GEO/izslerApp/global.R",
+    "project_path" : "izslerApp/global.R",
+    "properties" : {
+        "cursorPosition" : "23,0",
+        "scrollLine" : "9"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
