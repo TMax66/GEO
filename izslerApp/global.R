@@ -8,7 +8,7 @@ library(rgdal)
 library(sp)
 library(lubridate)
 library(DT)
-library(janitor)
+#library(janitor)
 library(RColorBrewer)
 
 
