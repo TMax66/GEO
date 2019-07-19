@@ -8,10 +8,13 @@ library(rgdal)
 library(sp)
 library(lubridate)
 library(DT)
-#library(janitor)
+library(readxl)
 library(RColorBrewer)
 
 coord <- read_excel("coord.xlsx")
+
+L<-readOGR(dsn="shp", layer="Regione_2018")
+L<-spTransform(L, CRS("+proj=longlat +datum=WGS84"))
 
 lomb<-readOGR(dsn="shp", layer="Province_2018")
 lomb<-spTransform(lomb, CRS("+proj=longlat +datum=WGS84"))
@@ -20,8 +23,10 @@ emilia<-spTransform(emilia, CRS("+proj=longlat +datum=WGS84"))
 
 
 leaflet(emilia) %>% addTiles() %>% 
-  addPolygons(data=emilia) %>% 
-  addPolygons(data=lomb) %>% 
+  #addPolygons(data=emilia) %>% 
+  addPolygons(data=L,fill="F", fillColor="navy", 
+              fillOpacity = 0.1,weight=1, opacity=1) %>% 
+  addPolygons(data=lomb,weight=2, fillColor="black") %>% 
   addMarkers( data=coord, ~long, ~lat, popup = ~as.character(sez), label = ~as.character(sez))
 
 leaflet(coord) %>% addTiles() %>% 
