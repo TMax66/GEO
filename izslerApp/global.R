@@ -29,27 +29,13 @@ leaflet(emilia) %>% addTiles() %>%
   addPolygons(data=L,fill="F", fillColor="navy", 
               fillOpacity = 0.1,weight=1, opacity=1) %>% 
   addPolygons(data=lomb,weight=2, fillColor="black") %>% 
+  addPolygons(data=emilia,weight=2,  fillColor="black") %>% 
   addMarkers( data=coord, ~long, ~lat, popup = ~as.character(sez), label = ~as.character(sez))
 
-leaflet(coord) %>% addTiles() %>% 
-  addMarkers(  ~long, ~lat, popup = ~as.character(sez), label = ~as.character(sez))
- 
+# leaflet(coord) %>% addTiles() %>% 
+#   addMarkers(  ~long, ~lat, popup = ~as.character(sez), label = ~as.character(sez)) %>% 
+#   addPolygons(data=lomb) %>% 
+#   addMarkers(  ~long, ~lat, popup = ~as.character(sez), label = ~as.character(sez)) %>% 
+#   addPolygons(data=emilia, fillColor="",color="", fillOpacity = 0.3)
 
 
-# addPolygons(data=emilia) %>% 
-  addPolygons(data=lomb)
-
-
-
-#%>% 
-  addMarkers(  ~long, ~lat, popup = ~as.character(sez), label = ~as.character(sez))
-
-
-
-
-#%>% 
-  addPolygons(data=emilia, fillColor="",color="", fillOpacity = 0.9)
-
-
-  #     
-  #     addPolygons(data=BG,fill=F, color="gray", weight=1, opacity=1.0) %>% 
