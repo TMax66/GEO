@@ -10,6 +10,8 @@ library(lubridate)
 library(DT)
 library(readxl)
 library(RColorBrewer)
+library(knitr)
+library(kableExtra)
 
 coord <- read_excel("coord.xlsx")
 
